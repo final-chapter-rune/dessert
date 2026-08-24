@@ -1,0 +1,103 @@
+/* ========================================
+   ProductCard.css —— 商品卡片样式
+   ======================================== */
+
+.product-media {
+  position: relative;   /* 按钮绝对定位的锚点 */
+}
+
+.product-media img {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;       /* 消除 img 内联产生的底部空隙 */
+}
+
+/* ---- Add to Cart 按钮 ---- */
+.add-to-cart {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 2.5rem;
+  border: 1px solid var(--rose-400);
+  border-radius: 999px;
+  background-color: white;
+  font: inherit;
+  font-weight: 600;
+  color: var(--rose-900);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.add-to-cart:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ---- 卡片文字 ---- */
+.product-category {
+  margin-top: 1.5rem;   /* 给压在图片外的按钮让出空间 */
+  font-size: 0.875rem;
+  color: var(--rose-500);
+}
+
+.product-name {
+  font-weight: 600;
+  color: var(--rose-900);
+}
+
+.product-price {
+  margin-top: 0.25rem;  /* 名称与价格之间的间距 */
+  font-weight: 600;
+  color: var(--red);
+}
+
+/* ---- 数量选择器(已加购状态) ---- */
+.qty-stepper {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 10rem;
+  padding: 0.75rem 1rem;
+
+  background-color: var(--red);
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.qty-stepper button {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.qty-stepper button:hover,
+.qty-stepper button:focus-visible {
+  border-color: white;
+}

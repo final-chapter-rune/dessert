@@ -1,0 +1,116 @@
+/* ========================================
+   Cart.css —— 购物车面板样式
+   ======================================== */
+
+.cart {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  align-self: start;    /* 不拉伸到与左列同高 */
+}
+
+.cart h2 {
+  color: var(--red);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ---- 空状态 ---- */
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.cart-empty p {
+  color: var(--rose-500);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* ---- 商品条目 ---- */
+.cart-items {
+  list-style: none;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rose-100);
+}
+
+.cart-item h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rose-900);
+}
+
+.cart-item-meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--rose-500);
+}
+
+.cart-item-total {
+  font-weight: 600;
+  color: var(--rose-900);
+}
+
+.remove-item {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1.5px solid var(--rose-300);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+/* ---- 结算区 ---- */
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: var(--rose-900);
+}
+
+.cart-total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.carbon-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--rose-50);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.confirm-order {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--red);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-order:hover {
+  background-color: hsl(14, 86%, 35%);
+}

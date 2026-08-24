@@ -1,0 +1,107 @@
+/* ========================================
+   Modal.css —— 订单确认弹窗
+   ======================================== */
+
+.modal-overlay {
+  position: fixed;      /* 固定定位:相对视口,滚动页面它不动 */
+  inset: 0;             /* 上右下左全是 0 = 铺满整个屏幕 */
+  background-color: rgba(0, 0, 0, 0.5);   /* 半透明黑 = 遮罩效果 */
+  display: grid;
+  place-items: center;  /* 弹窗在屏幕正中央 */
+  z-index: 10;          /* 盖住页面其他所有内容 */
+  padding: 1rem;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  max-height: 90vh;     /* 防止弹窗比屏幕还高 */
+  overflow: auto;       /* 内容太多时弹窗内部滚动 */
+}
+
+.modal-icon {
+  width: 2.5rem;
+}
+
+.modal h2 {
+  font-size: 2rem;
+  color: var(--rose-900);
+}
+
+.modal-subtitle {
+  color: var(--rose-500);
+  margin-bottom: 1.5rem;
+}
+
+.modal-summary {
+  background-color: var(--rose-50);
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.modal-items {
+  list-style: none;
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rose-100);
+}
+
+.modal-item img {
+  width: 3rem;
+  border-radius: 0.25rem;
+}
+
+.modal-item h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rose-900);
+}
+
+.modal-item p {
+  font-size: 0.875rem;
+  color: var(--rose-500);
+}
+
+.modal-item-total {
+  margin-left: auto;    /* 自动吃掉剩余空间 = 推到最右 */
+  font-weight: 600;
+  color: var(--rose-900);
+}
+
+.modal-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  color: var(--rose-900);
+}
+
+.modal-total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.start-new-order {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--red);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.start-new-order:hover {
+  background-color: hsl(14, 86%, 35%);
+}

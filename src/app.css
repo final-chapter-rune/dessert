@@ -1,0 +1,35 @@
+/* ========================================
+   app.css —— App 组件的样式(页面布局)
+   ======================================== */
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24rem;
+  column-gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.products-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---- 响应式:两栏 → 单栏,3 列 → 1 列 ---- */
+@media (max-width: 64rem) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
