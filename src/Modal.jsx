@@ -12,7 +12,7 @@ function Modal({ cart, onStartNewOrder }) {
         aria-modal="true"
         aria-labelledby="modal-title"
       >
-        <img className="modal-icon" src="/assets/images/icon-order-confirmed.svg" alt="" />
+        <img className="modal-icon" src="./assets/images/icon-order-confirmed.svg" alt="" />
         <h2 id="modal-title">Order Confirmed</h2>
         <p className="modal-subtitle">We hope you enjoy your food!</p>
 

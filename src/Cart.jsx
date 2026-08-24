@@ -12,7 +12,7 @@ const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
       {cart.length === 0 ? (
         <div className="cart-empty">
-          <img src="/assets/images/illustration-empty-cart.svg" alt="" />
+          <img src="./assets/images/illustration-empty-cart.svg" alt="" />
           <p>Your added items will appear here</p>
         </div>
       ) : (
@@ -35,7 +35,7 @@ const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
                 aria-label={`Remove ${item.name} from cart`}
                 onClick={() => onRemove(item.name)}
               >
-                <img src="/assets/images/icon-remove-item.svg" alt="" />
+                <img src="./assets/images/icon-remove-item.svg" alt="" />
               </button>
             </li>
           ))}
@@ -47,7 +47,7 @@ const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
         </div>
 
         <p className="carbon-note">
-            <img src="/assets/images/icon-carbon-neutral.svg" alt="" />
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
             This is a <strong>carbon-neutral</strong> delivery
         </p>
 
